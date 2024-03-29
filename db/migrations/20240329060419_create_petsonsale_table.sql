@@ -1,0 +1,10 @@
+-- migrate:up
+CREATE TABLE PetsOnSale (
+	SaleID INT AUTO_INCREMENT PRIMARY KEY,
+	PetID INT NOT NULL,
+	Price DECIMAL(10, 2) NOT NULL,
+	ListedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP	
+);
+
+-- migrate:down
+DROP TABLE PetsOnSale;
